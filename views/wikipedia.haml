@@ -1,0 +1,9 @@
+%h3 Wikipedia Results
+
+%ul
+  - @results.each do |result|
+    %li
+      %a{:href => "http://es.wikipedia.org/wiki/#{result['title']}"}
+        #{result['title']}
+      %br
+      #{result['snippet']}

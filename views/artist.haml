@@ -1,14 +1,25 @@
 %h3
   #{@artist['display_name']}
 %ul
-  %li Full name: #{@artist['name']}
-  %li Year of birth: #{@artist['birth']}
+  %li
+    %strong Full name:
+    #{@artist['name']}
+    %br
+    %strong Year of birth:
+    #{@artist['birth']}
   - if @artist['biography']
-    %li Biography: #{@artist['biography']}
-  %li Artworks:
-  - if @artist['artworks']
-    %ul
-    - @artist['artworks'].each do |artwork|
-      %li #{artwork['title']}
-      - if artwork['year']
-        #{ artwork['year']}
+    %li
+      %strong Biography:
+      #{@artist['biography']}
+  %li
+    %strong Artworks:
+    - if @artist['artworks']
+      %ul
+        - @artist['artworks'].each do |artwork|
+          %li #{artwork['title']}
+          - if artwork['year'] && artwork['year'] != 0
+            #{artwork['year']}
+
+%form{:action=>"/search_wikipedia", :method=>:post}
+  %input{:type=>"hidden", :id=>"name", :name => "name", :value=>escape(@artist['display_name'])}
+  %input{:type=>"submit", :value=>"Search Wikipedia"}

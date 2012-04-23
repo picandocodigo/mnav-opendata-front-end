@@ -2,6 +2,7 @@ require 'sinatra'
 require 'haml'
 require './lib/artist_service.rb'
 require './lib/artwork_service.rb'
+require './lib/wikipedia_service.rb'
 
 get '/' do
   haml :index
@@ -33,4 +34,9 @@ end
 
 post '/artworks/technique/' do
   redirect "/artworks/technique/#{params[:technique]}"
+end
+
+post '/search_wikipedia' do
+  @results = WikipediaService.search(params[:name])
+  haml :wikipedia, :layout => :layout
 end

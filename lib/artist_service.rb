@@ -1,4 +1,5 @@
 require './lib/mnav_service.rb'
+require './lib/wikipedia_service.rb'
 
 class ArtistService < MNAVService
   attr_reader :artist, :artists
