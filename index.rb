@@ -16,24 +16,25 @@ end
 
 get '/artists/:name' do
   service = ArtistService.new
-  @artists = service.get_artists_by_name(params[:name])
+  @artists = service.get_artists_by_name(URI.unescape(params[:name]))
   haml :artists, :layout => :layout
 end
 
 post '/artists/' do
   if params[:name]
-    redirect "/artists/#{params[:name]}"
+    name = URI.escape(params[:name])
+    redirect "/artists/#{name}"
   end
 end
 
 get '/artworks/technique/:technique' do
   service = ArtworkService.new
-  @artworks = service.get_artwork_by_technique(params[:technique])
+  @artworks = service.get_artwork_by_technique(URI.unescape(params[:technique]))
   haml :artworks, :layout => :layout
 end
 
 post '/artworks/technique/' do
-  redirect "/artworks/technique/#{params[:technique]}"
+  redirect "/artworks/technique/#{URI.escape(params[:technique])}"
 end
 
 post '/search_wikipedia' do

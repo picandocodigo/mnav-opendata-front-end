@@ -1,12 +1,10 @@
 require './lib/mnav_service.rb'
 require './lib/wikipedia_service.rb'
+require 'uri'
 
+# Public - Access MNAV API for Artists
 class ArtistService < MNAVService
   attr_reader :artist, :artists
-
-  def initialize
-    super
-  end
 
   # Public - get an artist's info by id
   #
@@ -34,6 +32,10 @@ class ArtistService < MNAVService
     self.get_data("artists", {:birth => birth})
   end
 
+  private
+  # Internal - Get an artist's artworks
+  #
+  # id - artist's id
   def get_artist_artworks(id)
     self.get_data("artists/#{id}/artworks")
   end
