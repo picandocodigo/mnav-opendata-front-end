@@ -5,4 +5,10 @@
   %li Year of birth: #{@artist['birth']}
   - if @artist['biography']
     %li Biography: #{@artist['biography']}
-  %li Artworks: 
+  %li Artworks:
+  - if @artist['artworks']
+    %ul
+    - @artist['artworks'].each do |artwork|
+      %li #{artwork['title']}
+      - if artwork['year']
+        #{ artwork['year']}

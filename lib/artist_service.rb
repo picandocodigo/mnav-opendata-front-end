@@ -12,7 +12,9 @@ class ArtistService < MNAVService
   # id - Integer
   #
   def get_artist(id)
-    self.get_data("artists", {:id => id.to_i})
+    artist = self.get_data("artists/#{id.to_i}")
+    artist['artworks'] = get_artist_artworks(id)
+    return artist
   end
 
   # Public - get artist searching by their name
@@ -29,6 +31,10 @@ class ArtistService < MNAVService
   #
   def get_artists_by_birth(birth)
     self.get_data("artists", {:birth => birth})
+  end
+
+  def get_artist_artworks(id)
+    self.get_data("artists/#{id}/artworks")
   end
 
 end

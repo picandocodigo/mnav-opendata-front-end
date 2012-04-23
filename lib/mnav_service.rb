@@ -10,12 +10,12 @@ class MNAVService
     @base_uri = api_info['api_host']
   end
 
-  def get_data(url, query)
+  def get_data(url, query = nil)
     url = "#{@base_uri}/#{url}/"
-    if(query[:id])
-      data = HTTParty.get(url + query[:id].to_s)
-    else
+    if(query)
       data = HTTParty.get(url, :query => query)
+    else
+      data = HTTParty.get(url)
     end
     return data.parsed_response
   end
