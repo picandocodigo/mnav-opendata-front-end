@@ -1,1 +1,17 @@
-%h1 Hello
+%h3 Search Artists
+%p
+  %form{:action => "/artists/", :method => "post"}
+    %label{:for => "name"}
+      Artist name:
+    %input{:type=>"text", :id => "name", :name => "name"}
+    %br
+    %input{:type => "submit", :id => "search_artists"}
+
+%h3 Search Artwork
+%p
+  %form{:action => "/artworks/technique/", :method => "post"}
+    %label{:for => "technique"}
+      Technique:
+    %input{:type=>"text", :id => "technique", :name => "technique"}
+    %br
+    %input{:type => "submit", :id => "search_technique"}

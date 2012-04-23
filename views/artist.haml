@@ -1,0 +1,8 @@
+%h3
+  #{@artist['display_name']}
+%ul
+  %li Full name: #{@artist['name']}
+  %li Year of birth: #{@artist['birth']}
+  - if @artist['biography']
+    %li Biography: #{@artist['biography']}
+  %li Artworks: 
