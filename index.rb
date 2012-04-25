@@ -1,8 +1,23 @@
 require 'sinatra'
+require 'sinatra/r18n'
 require 'haml'
+require 'sass'
 require './lib/artist_service.rb'
 require './lib/artwork_service.rb'
 require './lib/wikipedia_service.rb'
+
+before do
+  if params[:locale]
+    session[:locale] = params[:locale] 
+  else
+    session[:locale] = 'es'
+  end
+end
+
+get '/style.css' do
+  content_type 'text/css', :charset => 'utf-8'
+  scss :style
+end
 
 get '/' do
   haml :index
@@ -20,7 +35,7 @@ get '/artists/:name' do
   haml :artists, :layout => :layout
 end
 
-post '/artists/' do
+post '/artists' do
   if params[:name]
     name = URI.escape(params[:name])
     redirect "/artists/#{name}"
@@ -33,7 +48,7 @@ get '/artworks/technique/:technique' do
   haml :artworks, :layout => :layout
 end
 
-post '/artworks/technique/' do
+post '/artworks/technique' do
   redirect "/artworks/technique/#{URI.escape(params[:technique])}"
 end
 

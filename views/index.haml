@@ -1,17 +1,16 @@
-%h3 Search Artists
+%h3 #{t.artist.search}
 %p
-  %form{:action => "/artists/", :method => "post"}
+  %form{:action => "/artists", :method => "post"}
     %label{:for => "name"}
-      Artist name:
+      %p
+        =t.artist.name
     %input{:type=>"text", :id => "name", :name => "name"}
-    %br
-    %input{:type => "submit", :id => "search_artists"}
+    %input{:type => "submit", :id => "search_artists", :value => t.artist.search}
 
-%h3 Search Artwork
+%h3 #{t.artwork.search}
 %p
-  %form{:action => "/artworks/technique/", :method => "post"}
+  %form{:action => "/artworks/technique", :method => "post"}
     %label{:for => "technique"}
-      Technique:
+      #{t.artwork.technique}:
     %input{:type=>"text", :id => "technique", :name => "technique"}
-    %br
-    %input{:type => "submit", :id => "search_technique"}
+    %input{:type => "submit", :id => "search_technique", :value => t.artwork.search}

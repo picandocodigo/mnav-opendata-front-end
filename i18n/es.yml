@@ -1,0 +1,20 @@
+artist:
+  singular: Artista
+  plural: Artistas
+  search: Buscar artistas
+  name: Nombre de artista
+  born: Nacido en
+  bio: Biografía
+  complete: Nombre completo
+  birth: Año de nacimiento
+  death: Año de fallecimiento
+  artworks: Obras
+
+artwork:
+  search: Buscar Obras
+  technique: Técnicas
+
+general:
+  title: Aplicación de ejemplo frontend para API del MNAV
+  example: Aplicación de ejemplo para
+  wikipedia: Buscar en Wikipedia
