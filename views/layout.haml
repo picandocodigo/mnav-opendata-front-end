@@ -2,7 +2,7 @@
 %html{:xmlns=>"http://www.w3.org/1999/xhtml"}
   %head
     %link{ :rel=>'stylesheet', :type=> 'text/css', :href=>'/style.css'}
-    %title Title
+    %title #{t.general.title}
   %body
     .language
       - if r18n.locale.code == "es"
@@ -17,7 +17,6 @@
 
     %div
       =yield
-
 
     %small
       = t.general.example
