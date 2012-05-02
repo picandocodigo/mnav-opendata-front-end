@@ -1,24 +1,32 @@
-!!!
-%html{:xmlns=>"http://www.w3.org/1999/xhtml"}
+!!! 5
+%html
   %head
-    %link{ :rel=>'stylesheet', :type=> 'text/css', :href=>'/style.css'}
     %title #{t.general.title}
+    %meta{:charset => 'utf-8'}
+    %meta{:name => 'author', :content => 'Fernando Briano, DrummerHead'}
+    %meta{:name => 'viewport', :content => 'width=device-width'}
+    %link{:rel =>'stylesheet', :href =>'/style.css'}
   %body
-    .language
-      - if r18n.locale.code == "es"
-        %a{:href => request.path_info + "?locale=en", :title => "English"}
-          %img{:src => "/images/english.jpg"}
-      - if r18n.locale.code == "en"
-        %a{:href => request.path_info + "?locale=es", :title => "Español"}
-          %img{:src => "/images/espanol.jpg"}
-    %h1
-      %a{:href=>"/", :title=>"Home"}
-        = t.general.title
+    %header{:role => 'banner'}
+      .vessel
+        %h1
+          %a{:href => "/", :title => "Home"}
+            = t.general.title
+        .language
+          - if r18n.locale.code == "es"
+            %a{:href => request.path_info + "?locale=en", :title => "English"}
+              %img{:src => "/images/english.jpg"}
+          - if r18n.locale.code == "en"
+            %a{:href => request.path_info + "?locale=es", :title => "Español"}
+              %img{:src => "/images/espanol.jpg"}
 
-    %div
-      =yield
+    %div{:role => 'main'}
+      .vessel
+        =yield
 
-    %small
-      = t.general.example
-    %a{:href=>"https://github.com/picandocodigo/mnav-opendata-api"}
-      MNAV Open Data API
+    %footer{:role => 'contentinfo'}
+      .vessel
+        %p
+          = t.general.example
+          %a{:href => "https://github.com/picandocodigo/mnav-opendata-api"}
+            MNAV Open Data API
