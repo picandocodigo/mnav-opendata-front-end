@@ -1,4 +1,47 @@
-.language{
-  float: right;
-	width: 50px;
+/*   -     -     -              -     -     -   *\
+> >  All tha things down there by DrummerHead  < <
+\*   -     -     -              -     -     -   */
+
+
+/* Baseline *\   -     -     -     -     -
+\*          */
+
+html {
+  font-size: 100%;
 }
+body {
+  font-size: 1em;
+  line-height: 1.4;
+  margin: 0;
+  font-family: Palatino, 'Bookman Old Style', Georgia, serif;
+  color: #222;
+}
+/* /Baseline */
+
+
+/* Modular constructs *\   -     -     -     -     -
+\*                    */
+
+.vessel {
+  max-width: 70em;
+  margin: 0 auto;
+  padding: 0 2em;
+}
+/* /Modular constructs */
+
+
+/* Promiscuous elements *\   -     -     -     -     -
+\*                      */
+
+.language {
+  float: right;
+  width: 50px;
+}
+/* Promiscuous elements */
+
+
+
+
+
+
+
