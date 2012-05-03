@@ -29,13 +29,6 @@
             %input{:type => 'text', :id => 'site-search', :placeholder => 'Buscar Obras o Artistas'}
             %button{:type => 'submit'}
               Buscar
-        .language
-          - if r18n.locale.code == "es"
-            %a{:href => request.path_info + "?locale=en", :title => "English"}
-              %img{:src => "/images/english.jpg"}
-          - if r18n.locale.code == "en"
-            %a{:href => request.path_info + "?locale=es", :title => "Español"}
-              %img{:src => "/images/espanol.jpg"}
 
     %div{:role => 'main'}
       .vessel
