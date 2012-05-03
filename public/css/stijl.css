@@ -1,0 +1,87 @@
+/*   -     -     -              -     -     -   *\
+> >  All tha things down there by DrummerHead  < <
+\*   -     -     -              -     -     -   */
+
+
+/* Baseline *\   -     -     -     -     -
+\*          */
+
+html {
+  font-size: 100%;
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  position: relative;
+  margin: 0;
+  font-size: 1em;
+  line-height: 1.4;
+  font-family: Palatino, 'Bookman Old Style', Georgia, serif;
+  color: #222;
+  background-image: url('/images/app-bg.png');
+}
+/* /Baseline */
+
+
+/* Modular constructs *\   -     -     -     -     -
+\*                    */
+
+.vessel {
+  max-width: 70em;
+  margin: 0 auto;
+  padding: .2em 2em;
+  position: relative;
+}
+/* /Modular constructs */
+
+
+/* Promiscuous elements *\   -     -     -     -     -
+\*                      */
+[role='banner'] {
+}
+#brand {
+}
+[role='banner'] nav {
+}
+[role='navigation'] {
+}
+[role='banner'] form {
+}
+#site-search {
+}
+[role='banner'] [type='sumbit'] {
+}
+.language {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
+.language {
+}
+.language a {
+}
+.language img {
+}
+
+[role='main'] {
+  padding: 0 0 4em 0;
+}
+
+[role='contentinfo'] {
+  position: absolute;
+  width: 100%;
+  height: 4em;
+  bottom: 0;
+}
+[role='contentinfo'] ul {
+}
+[role='contentinfo'] li {
+}
+
+[role='banner'],
+[role='contentinfo'] {
+  background-color: rgba(170, 170, 170, .1);
+  box-shadow: 0 0 20px rgba(100, 100, 100, 0.1) inset;
+}
+
+/* Promiscuous elements */
