@@ -5,7 +5,8 @@
       %p
         Nombre
     %input{:type=>"text", :id => "name", :name => "name"}
-    %input{:type => "submit", :id => "search_artists", :value => "Buscar artistas"}
+    %button{:type => "submit", :id => "search_artists"}
+      Buscar artistas
 
 %h3 Buscar Obras
 %p
@@ -13,4 +14,5 @@
     %label{:for => "technique"}
       T&eacute;cnica:
     %input{:type=>"text", :id => "technique", :name => "technique"}
-    %input{:type => "submit", :id => "search_technique", :value => "Buscar obras"}
+    %button{:type => "submit", :id => "search_technique"}
+      Buscar obras
