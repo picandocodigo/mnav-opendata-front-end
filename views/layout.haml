@@ -5,7 +5,7 @@
     %meta{:charset => 'utf-8'}
     %meta{:name => 'author', :content => 'Fernando Briano, DrummerHead'}
     %meta{:name => 'viewport', :content => 'width=device-width'}
-    %link{:rel =>'stylesheet', :href =>'/style.css'}
+    %link{:rel =>'stylesheet', :href =>'/css/stijl.css'}
   %body
     %header{:role => 'banner'}
       .vessel
@@ -26,7 +26,7 @@
               %a{:href => '/contacto/', :rel => 'external'}
                 Contacto
           %form
-            %input{:type => 'text', :placeholder => 'Buscar Obras o Artistas'}
+            %input{:type => 'text', :id => 'site-search', :placeholder => 'Buscar Obras o Artistas'}
             %button{:type => 'submit'}
               Buscar
         .language
