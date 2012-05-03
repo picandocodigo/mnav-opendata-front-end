@@ -9,9 +9,26 @@
   %body
     %header{:role => 'banner'}
       .vessel
-        %h1
-          %a{:href => "/", :title => "Home"}
-            = t.general.title
+        %a{:href => "/", :id => 'brand'}
+          %img{:src => '/images/arte-uruguaya-logo.png', :alt => 'Arte Uruguaya', :title => t.general.title}
+        %nav
+          %ol{:role => 'navigation'}
+            %li
+              %a{:href => '/acerca/', :rel => 'external'}
+                Acerca
+            %li
+              %a{:href => '/datos-abiertos/', :rel => 'external'}
+                Datos Abiertos
+            %li
+              %a{:href => 'http://www.mnav.gub.uy/cms.php', :rel => 'external'}
+                Museo Nacional de Artes Visuales
+            %li
+              %a{:href => '/contacto/', :rel => 'external'}
+                Contacto
+          %form
+            %input{:type => 'text', :placeholder => 'Buscar Obras o Artistas'}
+            %button{:type => 'submit'}
+              Buscar
         .language
           - if r18n.locale.code == "es"
             %a{:href => request.path_info + "?locale=en", :title => "English"}
@@ -26,7 +43,16 @@
 
     %footer{:role => 'contentinfo'}
       .vessel
-        %p
-          = t.general.example
-          %a{:href => "https://github.com/picandocodigo/mnav-opendata-api"}
-            MNAV Open Data API
+        %ul
+          %li
+            Arte Uruguaya &#169; 2012
+          %li
+            Creado por
+            %a{:href => 'http://cuboxlabs.com/', :rel => 'external'}
+              Cubox Labs
+          %li
+            Open Source Project,
+            %a{:href => "https://github.com/picandocodigo/mnav-opendata-api", :rel => 'external'}
+              Fork it on Github
+          %li
+            &#9829;
