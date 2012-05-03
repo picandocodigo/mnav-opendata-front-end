@@ -11,6 +11,8 @@ artist:
   artworks: Artworks
 
 artwork:
+  singular: Artwork
+  plural: Artworks
   search: Search Artwork
   technique: Technique
 

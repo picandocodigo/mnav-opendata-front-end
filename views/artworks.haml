@@ -1,4 +1,4 @@
-%h3 Artworks
+%h3 #{t.artwork.plural}
 
 - @artworks.each do |artwork|
   %p
@@ -6,5 +6,5 @@
       #{artwork['title']}
     = artwork['year'] unless artwork['year'] == 0 || artwork['year'].nil?
     %br
-    Technique: #{artwork['technique']}
+    #{t.artwork.technique}: #{artwork['technique']}
     

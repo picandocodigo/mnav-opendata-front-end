@@ -11,8 +11,10 @@ artist:
   artworks: Obras
 
 artwork:
+  singular: Obra
+  plural: Obras
   search: Buscar Obras
-  technique: Técnicas
+  technique: Técnica
 
 general:
   title: Aplicación de ejemplo frontend para API del MNAV
