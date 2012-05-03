@@ -292,7 +292,7 @@ button-large {
 }
 
 [role='main'] {
-  padding: 0 0 4em 0;
+  padding: 0 0 7em 0;
 }
 
 [role='contentinfo'] {
@@ -302,8 +302,17 @@ button-large {
   bottom: 0;
 }
 [role='contentinfo'] ul {
+  list-style-type: none;
+  padding: 0;
+  margin: .7em 0 0 0;
 }
 [role='contentinfo'] li {
+  width: 30%;
+  float: left;
+}
+[role='contentinfo'] li:last-child {
+  text-align: right;
+  width: 10%;
 }
 
 [role='banner'],
