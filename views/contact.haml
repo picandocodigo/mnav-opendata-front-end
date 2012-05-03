@@ -1,13 +1,17 @@
-%form{:action =>"", :method=>"post"}
-  %fieldset.fields
-    %ul
-      %li
-        %label{:for=>"name"} Nombre
-        %input{:type=>"text", :name=>"name"}
-      %li
-        %label{:for=>"mail"} Direcci&oacute;n de correo electr&oacute;nico
-        %input{:type=>"text", :name=>"mail"}
-      %li
-        %label{:for =>"body"} Mensaje
-        %textarea{:name =>"body"}
-  %input{:type => "submit", :class => "sendmail", :value => "Enviar"}
+Sitio web desarrollado por Fernando Briano y Nicol&aacute;s Barrera en
+%a{:href => "http://cuboxlabs.com", :title => "Cubox"}
+  Cubox
+
+
+%h2 MNAV
+Pueden visitar el Museo Nacional de Artes Visuales en Tomás Giribaldi 2283 esq. Julio Herrera y Reissig, Parque Rodó, Montevideo, Uruguay.
+%ul
+  %li
+    %a{:href => "http://www.youtube.com/user/mnavtv", :title => "Canal del MNAV en YouTube"}
+      Canal en YouTube
+  %li
+    %a{:href => "http://www.facebook.com/MNAVmec", :title => "MNAV en Facebook"}
+      MNAV en Facebook
+  %li
+    %a{:href => "https://twitter.com/MuseoMNAV", :title => "MNAV en Twitter"}
+      MNAV en Twitter
