@@ -29,8 +29,16 @@ body {
 .vessel {
   max-width: 70em;
   margin: 0 auto;
-  padding: .2em 2em;
+  padding: .6em 2em;
   position: relative;
+}
+.vessel:before,
+.vessel:after {
+  content: '';
+  display: table;
+}
+.vessel:after {
+  clear: both;
 }
 /* /Modular constructs */
 
@@ -40,27 +48,38 @@ body {
 [role='banner'] {
 }
 #brand {
+  float: left;
+  width: 237px;
+  height: 50px;
+  padding: 7px;
+}
+#brand img {
+  display: block;
 }
 [role='banner'] nav {
+  margin: 0 0 0 300px;
 }
 [role='navigation'] {
+  padding: 0;
+  list-style-type: none;
+  overflow: hidden;
+  margin: 14px 0 0 0;
+}
+[role='navigation'] li {
+  float: left;
+  margin: 0 2em 0 0;
+}
+[role='navigation'] a {
+  text-decoration: none;
+  padding: .4em;
 }
 [role='banner'] form {
 }
 #site-search {
+  width: 200px;
 }
 [role='banner'] [type='sumbit'] {
-}
-.language {
-  position: absolute;
-  top: 1em;
-  right: 1em;
-}
-.language {
-}
-.language a {
-}
-.language img {
+  width: 50px;
 }
 
 [role='main'] {
