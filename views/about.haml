@@ -1,0 +1,34 @@
+%h1
+  Acerca De
+
+De
+%a{:href => "http://www.mnav.gub.uy/cms.php?id=datosabiertos", :title => "Datos Abiertos del MNAV"}
+  Datos Abiertos del MNAV
+
+%blockquote
+  En el Día Internacional de los Datos Abiertos el museo libera datos para ser usados por programadores que quieran difundir informaci&oacute;n del arte nacional. 
+
+Esta aplicaci&oacute;n aprovecha los datos para mostrar de manera amigable la información.
+
+Una de las metas del proyecto es demandar más datos abiertos del <abbr title="Museo Nacional de Artes Visuales">MNAV</abbr> y otros museos. Lo ideal ser&iacute;a obtener datos de todos los museos del Uruguay.
+
+%h2
+  Sobre los datos
+
+Hay 137 obras listadas en los datos abiertos liberados por el museo de 4.000 obras por "liberar". De aproximadamente 1.500 artistas relevados, hay 876 que tienen obras en el museo. Los datos abiertos contienen información de 914 artistas.
+
+No hay una lista centralizada de esta información, por lo que se hace repetidamente en cada biblioteca, museo o institución de arte del país.
+
+Las imágenes están enlazadas desde el sitio web del MNAV, y son propiedad del museo.
+
+%h2
+  Implementaci&oacute;n
+
+Para procesar y mostrar los datos, se desarroll&oacute; una API en Ruby On Rails. El código es libre y puede encontrarse en:
+%a{:href => "https://github.com/picandocodigo/mnav-opendata-api", :title => "GitHub"}
+  GitHub
+\. La idea de la API es que se agreguen fuentes de datos de otros museos e instituciones a medida que estos sean liberados.
+
+Este sitio es una aplicaci&oacute;n web aparte que se alimenta de los datos provistos por la API. Es un proyecto que utiliza Sinatra, Haml y SaSS. El código también est&aacute; disponible en
+%a{:href => "https://github.com/picandocodigo/mnav-opendata-api", :title => "GitHub"}
+  GitHub
