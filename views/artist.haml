@@ -5,14 +5,14 @@
     %strong 
     #{@artist['name']}
     %br
-    %strong #{t.artist.birth}
+    %strong Nacimiento
     #{@artist['birth']}
   - if @artist['biography']
     %li
-      %strong #{t.artist.bio}
+      %strong Biograf&iacute;a
       #{@artist['biography']}
   %li
-    %strong #{t.artist.artworks}
+    %strong Obras
     - if @artist['artworks']
       %ul
         - @artist['artworks'].each do |artwork|
@@ -22,4 +22,4 @@
 
 %form{:action=>"/search_wikipedia", :method=>:post}
   %input{:type=>"hidden", :id=>"name", :name => "name", :value=>escape(@artist['display_name'])}
-  %input{:type=>"submit", :value=>t.general.wikipedia}
+  %input{:type=>"submit", :value=>"Buscar en Wikipedia"}

@@ -1,18 +1,10 @@
 require 'sinatra'
-require 'sinatra/r18n'
 require 'haml'
 require 'sass'
 require './lib/artist_service.rb'
 require './lib/artwork_service.rb'
 require './lib/wikipedia_service.rb'
 
-before do
-  if params[:locale]
-    session[:locale] = params[:locale] 
-  else
-    session[:locale] = 'es'
-  end
-end
 
 get '/style.css' do
   content_type 'text/css', :charset => 'utf-8'
