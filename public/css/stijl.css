@@ -20,6 +20,31 @@ body {
   color: #222;
   background-image: url('/images/app-bg.png');
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Bookman Old Style', Palatino, Georgia, serif;
+}
+h1 {
+  font-size: 2em;
+  line-height: 1.1em;
+  font-weight: normal;
+}
+h2 {
+  font-size: 1.5em;
+  font-weight: normal;
+}
+h3 {
+}
+h4 {
+}
+h5 {
+}
+h6 {
+}
 input,
 button,
 select,
@@ -123,9 +148,6 @@ select:focus {
      -moz-box-shadow: none;
           box-shadow: none;
 }
-
-
-
 /* /Baseline */
 
 
@@ -239,11 +261,28 @@ button-large {
           border-radius: 5px;
 }
 
+.hero {
+  background-color: rgba(255,255,255,.7);
+  box-shadow: 0 0 10px rgba(170,170,170,.3);
+  border-radius: 10px;
+  padding: 1em 2.5em 1.2em;
+  text-align: right;
+}
+.hero h1,
+.hero h2 {
+  margin:  .25em 0;
+  line-height: 1.1;
+}
+.hero p {
+  margin: .25em 0;
+}
+
 /* /Modular constructs */
 
 
 /* Promiscuous elements *\   -     -     -     -     -
 \*                      */
+
 [role='banner'] {
 }
 #brand {
@@ -282,7 +321,7 @@ button-large {
 [role='banner'] form {
   position: absolute;
   top: 2em;
-  right: 0;
+  right: 2em;
 }
 #site-search {
   width: 200px;
@@ -322,3 +361,32 @@ button-large {
 }
 
 /* Promiscuous elements */
+
+/* Landing *\   -     -     -     -     -
+\*          */
+
+#welcome {
+}
+#welcome h2 {
+}
+#welcome p {
+}
+#search-landing {
+}
+.searchCol {
+  float: left;
+  width: 50%;
+}
+#search-landing h3 {
+}
+#search-landing form {
+}
+#search-landing label {
+  display: block;
+}
+#search-landing input {
+}
+#search-landing button {
+}
+
+/* Landing */

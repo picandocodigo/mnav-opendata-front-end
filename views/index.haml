@@ -1,18 +1,23 @@
-%h3 Buscar Artistas
-%p
-  %form{:action => "/artists", :method => "post"}
-    %label{:for => "name"}
-      %p
-        Nombre
-    %input{:type=>"text", :id => "name", :name => "name"}
-    %button{:type => "submit", :id => "search_artists"}
-      Buscar artistas
+%section{:id => 'welcome'}
+  .hero
+    %h1 Arte Uruguya
+    %p En este sitio podrás encontrar artistas uruguayos y las obras que crearon. Simple y al grano!
 
-%h3 Buscar Obras
-%p
-  %form{:action => "/artworks/technique", :method => "post"}
-    %label{:for => "technique"}
-      T&eacute;cnica:
-    %input{:type=>"text", :id => "technique", :name => "technique"}
-    %button{:type => "submit", :id => "search_technique"}
-      Buscar obras
+%section{:id => 'search-landing'}
+  .artists.searchCol
+    %h2 Artistas
+    %form{:action => "/artists", :method => "post"}
+      %label{:for => "name"}
+        Nombre:
+      %input{:type=>"text", :id => "name", :name => "name"}
+      %button{:type => "submit", :id => "search_artists"}
+        Buscar artistas
+
+  .works.searchCol
+    %h2 Obras
+    %form{:action => "/artworks/technique", :method => "post"}
+      %label{:for => "technique"}
+        Nombre o T&eacute;cnica:
+      %input{:type=>"text", :id => "technique", :name => "technique"}
+      %button{:type => "submit", :id => "search_technique"}
+        Buscar obras
