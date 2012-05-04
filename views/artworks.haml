@@ -3,7 +3,7 @@
 - @artworks.each do |artwork|
   %p
     %strong
-      %a{:href=>"/artworks/#{artwork['id']}", :title=> artwork['title']}
+      %a{:href=>"/obras/#{artwork['id']}", :title=> artwork['title']}
         #{artwork['title']}
     = artwork['year'] unless artwork['year'] == 0 || artwork['year'].nil?
     %br
