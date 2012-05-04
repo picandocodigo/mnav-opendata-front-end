@@ -3,6 +3,6 @@
 - @artists.each do |artist|
   %ul
     %li
-      %a{:href=>"/artist/#{artist['id']}", :title=>"#{artist['display_name']}"}
+      %a{:href=>"/artist/#{artist['id']}", :title=> artist['display_name']}
         #{artist['display_name']}
     %li Nacimiento: #{artist['birth']}

@@ -4,6 +4,13 @@ require './lib/mnav_service.rb'
 class ArtworkService < MNAVService
   attr_reader :artworks, :artwork
 
+  # Public - Get artwork by id
+  #
+  # id - Integer
+  def get_artwork(id)
+    self.get_data("artworks/#{id.to_i}")
+  end
+
   # Public - Search artworks with certain technique
   #
   # technique - String

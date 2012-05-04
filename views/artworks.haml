@@ -3,8 +3,9 @@
 - @artworks.each do |artwork|
   %p
     %strong
-      #{artwork['title']}
+      %a{:href=>"/artworks/#{artwork['id']}", :title=> artwork['title']}
+        #{artwork['title']}
     = artwork['year'] unless artwork['year'] == 0 || artwork['year'].nil?
     %br
-    Obras: #{artwork['technique']}
+    T&eacute;cnica: #{artwork['technique']}
     

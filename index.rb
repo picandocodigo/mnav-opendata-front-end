@@ -46,6 +46,12 @@ post '/artists' do
   end
 end
 
+get '/artworks/:id' do
+  service = ArtworkService.new
+  @artwork = service.get_artwork(params[:id])
+  haml :artwork
+end
+
 get '/artworks/technique/:technique' do
   service = ArtworkService.new
   @artworks = service.get_artwork_by_technique(URI.unescape(params[:technique]))
