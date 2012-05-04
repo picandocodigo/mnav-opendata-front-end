@@ -1,14 +1,6 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    columnize (0.3.6)
-    debugger (1.0.0)
-      columnize (>= 0.3.1)
-      debugger-linecache
-      debugger-ruby_core_source
-    debugger-linecache (1.0.1)
-      debugger-ruby_core_source
-    debugger-ruby_core_source (1.0.1)
     haml (3.1.4)
     httparty (0.8.1)
       multi_json
@@ -32,7 +24,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  debugger
   haml
   httparty
   rack
