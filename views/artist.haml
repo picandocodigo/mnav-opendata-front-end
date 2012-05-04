@@ -20,6 +20,6 @@
           - if artwork['year'] && artwork['year'] != 0
             #{artwork['year']}
 
-%form{:action=>"/search_wikipedia", :method=>:post}
+%form{:action=>"/buscar_wikipedia", :method=>:post}
   %input{:type=>"hidden", :id=>"name", :name => "name", :value=>escape(@artist['display_name'])}
   %input{:type=>"submit", :value=>"Buscar en Wikipedia"}
