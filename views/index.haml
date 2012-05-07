@@ -4,135 +4,141 @@
     %p En este sitio podrás encontrar artistas uruguayos y las obras que crearon. Simple y al grano!
 
 %section{:id => 'search-landing'}
-  .artists.searchCol
+  .artists.twoCols.separator
     %h2 Artistas
-    %form{:action => "/artistas", :method => "post"}
-      %label{:for => "name"}
-        Nombre:
-      %input{:type=>"text", :id => "name", :name => "name"}
-      %button{:type => "submit", :id => "search_artists"}
-        Buscar artistas
-    %h3 Artistas Destacados
-    %ul
-      %li
-        %a{:href => '#'}
-          Bananofido Montarelli
-      %li
-        %a{:href => '#'}
-          Marcos Banatilla
-      %li
-        %a{:href => '#'}
-          Dingo Bolisquietti
-      %li
-        %a{:href => '#'}
-          Sambomba Ramirez
-      %li
-        %a{:href => '#'}
-          Groski Shalomnok
-      %li
-        %a{:href => '#'}
-          Flatu Lento
-      %li
-        %a{:href => '#'}
-          Brasilero Martinez
-      %li
-        %a{:href => '#'}
-          Farias Groñeiro
-      %li
-        %a{:href => '#'}
-          Blanes Mocca
-      %li
-        %a{:href => '#'}
-          Davidoff Estrogonoff
-      %li
-        %a{:href => '#'}
-          Blanquito Marcose
-      %li
-        %a{:href => '#'}
-          Shanti Fladeo
 
+    %section
+      %form{:action => "/artistas", :method => "post"}
+        %label{:for => "name"}
+          Nombre o Apellido:
+        %input{:type=>"text", :id => "name", :name => "name"}
+        %button{:type => "submit", :id => "search_artists"}
+          Buscar artistas
 
+    %section.showcase
+      %h3 Artistas Destacados
+      %ul
+        %li
+          %a{:href => '#'}
+            Bananofido Montarelli
+        %li
+          %a{:href => '#'}
+            Marcos Banatilla
+        %li
+          %a{:href => '#'}
+            Dingo Bolisquietti
+        %li
+          %a{:href => '#'}
+            Sambomba Ramirez
+        %li
+          %a{:href => '#'}
+            Groski Shalomnok
+        %li
+          %a{:href => '#'}
+            Flatu Lento
+        %li
+          %a{:href => '#'}
+            Brasilero Martinez
+        %li
+          %a{:href => '#'}
+            Farias Groñeiro
+        %li
+          %a{:href => '#'}
+            Blanes Mocca
+        %li
+          %a{:href => '#'}
+            Davidoff Estrogonoff
+        %li
+          %a{:href => '#'}
+            Blanquito Marcose
+        %li
+          %a{:href => '#'}
+            Shanti Fladeo
 
-
-  .works.searchCol
+  .works.twoCols
     %h2 Obras
-    %form{:action => "/obras/tecnica", :method => "post"}
-      %label{:for => "technique"}
-        Nombre o T&eacute;cnica:
-      %input{:type=>"text", :id => "technique", :name => "technique"}
-      %button{:type => "submit", :id => "search_technique"}
-        Buscar obras
-    %h3 Técnicas
-    %ul
-      %li
-        %a{:href => '#'}
-          Óleo
-      %li
-        %a{:href => '#'}
-          Cera
-      %li
-        %a{:href => '#'}
-          Acuarela
-      %li
-        %a{:href => '#'}
-          Témpera
-      %li
-        %a{:href => '#'}
-          Acrílico
-      %li
-        %a{:href => '#'}
-          Pastel
-      %li
-        %a{:href => '#'}
-          Temple
-      %li
-        %a{:href => '#'}
-          Tinta
-      %li
-        %a{:href => '#'}
-          Fresco
-      %li
-        %a{:href => '#'}
-          Grisalla
-      %li
-        %a{:href => '#'}
-          Puntillismo
-      %li
-        %a{:href => '#'}
-          Dripping
-      %li
-        %a{:href => '#'}
-          Graffiti
-      %li
-        %a{:href => '#'}
-          Técnicas mixtas
 
-    %h3 Soporte
-    %ul
-      %li
-        %a{:href => '#'}
-          Papel
-      %li
-        %a{:href => '#'}
-          Cartón
-      %li
-        %a{:href => '#'}
-          Madera
-      %li
-        %a{:href => '#'}
-          Lienzo 
-      %li
-        %a{:href => '#'}
-          Muros
-      %li
-        %a{:href => '#'}
-          Metal
-      %li
-        %a{:href => '#'}
-          Vidrio
-      %li
-        %a{:href => '#'}
-          Plástico
-      %li
-        %a{:href => '#'}
-          Cuero
+    %section
+      %form{:action => "/obras/tecnica", :method => "post"}
+        %label{:for => "technique"}
+          Nombre, Técnica o Soporte:
+        %input{:type=>"text", :id => "technique", :name => "technique"}
+        %button{:type => "submit", :id => "search_technique"}
+          Buscar obras
+
+    %section.showcase.twoCols
+      %h3 Técnicas
+      %ul
+        %li
+          %a{:href => '#'}
+            Óleo
+        %li
+          %a{:href => '#'}
+            Cera
+        %li
+          %a{:href => '#'}
+            Acuarela
+        %li
+          %a{:href => '#'}
+            Témpera
+        %li
+          %a{:href => '#'}
+            Acrílico
+        %li
+          %a{:href => '#'}
+            Pastel
+        %li
+          %a{:href => '#'}
+            Temple
+        %li
+          %a{:href => '#'}
+            Tinta
+        %li
+          %a{:href => '#'}
+            Fresco
+        %li
+          %a{:href => '#'}
+            Grisalla
+        %li
+          %a{:href => '#'}
+            Puntillismo
+        %li
+          %a{:href => '#'}
+            Dripping
+        %li
+          %a{:href => '#'}
+            Graffiti
+        %li
+          %a{:href => '#'}
+            Técnicas mixtas
+
+    %section.showcase.twoCols
+      %h3 Soporte
+      %ul
+        %li
+          %a{:href => '#'}
+            Papel
+        %li
+          %a{:href => '#'}
+            Cartón
+        %li
+          %a{:href => '#'}
+            Madera
+        %li
+          %a{:href => '#'}
+            Lienzo 
+        %li
+          %a{:href => '#'}
+            Muros
+        %li
+          %a{:href => '#'}
+            Metal
+        %li
+          %a{:href => '#'}
+            Vidrio
+        %li
+          %a{:href => '#'}
+            Plástico
+        %li
+          %a{:href => '#'}
+            Cuero
