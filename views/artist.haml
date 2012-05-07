@@ -16,9 +16,12 @@
     - if @artist['artworks']
       %ul
         - @artist['artworks'].each do |artwork|
-          %li #{artwork['title']}
-          - if artwork['year'] && artwork['year'] != 0
-            #{artwork['year']}
+          %li
+            %a{:href=>"/obras/#{artwork['id']}", :title=>artwork['title']}
+              #{artwork['title']}
+            %img{:src=>artwork['image_thumbnail_url']}
+            - if artwork['year'] && artwork['year'] != 0
+              #{artwork['year']}
 
 %form{:action=>"/buscar_wikipedia", :method=>:post}
   %input{:type=>"hidden", :id=>"name", :name => "name", :value=>escape(@artist['display_name'])}
