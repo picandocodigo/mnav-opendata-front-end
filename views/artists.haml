@@ -1,8 +1,7 @@
 %h3 Artistas
 
-- @artists.each do |artist|
-  %ul
+%ul
+  - @artists.each do |artist|
     %li
-      %a{:href=>"/artista/#{artist['id']}", :title=> artist['display_name']}
-        #{artist['display_name']}
-    %li Nacimiento: #{artist['birth']}
+      = show_artist_title(artist)
+      = show_artist_birth(artist)

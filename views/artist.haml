@@ -1,27 +1,6 @@
-%h3
+%h2
   #{@artist['display_name']}
-%ul
-  %li
-    %strong 
-    #{@artist['name']}
-    %br
-    %strong Nacimiento
-    #{@artist['birth']}
-  - if @artist['biography']
-    %li
-      %strong Biograf&iacute;a
-      #{@artist['biography']}
-  %li
-    %strong Obras
-    - if @artist['artworks']
-      %ul
-        - @artist['artworks'].each do |artwork|
-          %li
-            %a{:href=>"/obras/#{artwork['id']}", :title=>artwork['title']}
-              #{artwork['title']}
-            %img{:src=>artwork['image_thumbnail_url']}
-            - if artwork['year'] && artwork['year'] != 0
-              #{artwork['year']}
+= show_artist_info(@artist)
 
 %form{:action=>"/buscar_wikipedia", :method=>:post}
   %input{:type=>"hidden", :id=>"name", :name => "name", :value=>escape(@artist['display_name'])}
