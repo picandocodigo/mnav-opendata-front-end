@@ -4,9 +4,9 @@ Front end sample application for [MNAV OpenData API](https://github.com/picandoc
 
 ## Installation:
 
-`git clone git@github.com:picandocodigo/mnav-opendata-front-end.git`
-`cd mnav-opendata-front-end/`
-`bundle install`
+    git clone git@github.com:picandocodigo/mnav-opendata-front-end.git
+    cd mnav-opendata-front-end/
+    bundle install
 
 ## Configuration
 
