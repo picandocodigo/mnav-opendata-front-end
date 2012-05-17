@@ -1,7 +1,7 @@
 helpers do
   def show_artist_title(artist)
     if artist['artworks_count'].to_i > 0 || artist['biography']
-      "<a href=\"/artista/#{artist['id']}\" title=\"artist['display_name']\">
+      "<a href=\"/artista/#{artist['id']}\" title=\"#{artist['display_name']}\">
       #{artist['display_name']}</a>"
     else
       "#{artist['display_name']}"

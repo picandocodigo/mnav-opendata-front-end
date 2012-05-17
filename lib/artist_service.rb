@@ -32,6 +32,10 @@ class ArtistService < MNAVService
     self.get_data("artists", {:birth => birth})
   end
 
+  def get_top_artists(limit = 10)
+    self.get_data("top/artists", {:limit => limit})
+  end
+
   private
   # Internal - Get an artist's artworks
   #

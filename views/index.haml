@@ -18,42 +18,10 @@
     %section.showcase
       %h3 Artistas Destacados
       %ul
-        %li
-          %a{:href => '#'}
-            Bananofido Montarelli
-        %li
-          %a{:href => '#'}
-            Marcos Banatilla
-        %li
-          %a{:href => '#'}
-            Dingo Bolisquietti
-        %li
-          %a{:href => '#'}
-            Sambomba Ramirez
-        %li
-          %a{:href => '#'}
-            Groski Shalomnok
-        %li
-          %a{:href => '#'}
-            Flatu Lento
-        %li
-          %a{:href => '#'}
-            Brasilero Martinez
-        %li
-          %a{:href => '#'}
-            Farias Groñeiro
-        %li
-          %a{:href => '#'}
-            Blanes Mocca
-        %li
-          %a{:href => '#'}
-            Davidoff Estrogonoff
-        %li
-          %a{:href => '#'}
-            Blanquito Marcose
-        %li
-          %a{:href => '#'}
-            Shanti Fladeo
+        - @artists.each do |artist|
+          %li
+            %a{:href => "artista/#{artist['id']}"}
+              = artist['name']
 
   .works.twoCols
     %h2 Obras

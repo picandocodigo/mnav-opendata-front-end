@@ -13,6 +13,8 @@ end
 
 get '/' do
   @title = "Inicio"
+  service = ArtistService.new
+  @artists = service.get_top_artists(10)
   haml :index
 end
 
