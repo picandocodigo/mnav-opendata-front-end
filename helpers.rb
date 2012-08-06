@@ -29,7 +29,7 @@ helpers do
       artist_info += "<h3>Obras</h3>\n\t<ul>"
       @artist['artworks'].each do |artwork|
         artist_info += "<li><a href=\"/obras/#{artwork['id']}\" title=\"#{artwork['title']}\">
-                        #{artwork['title']}<img src=\"#{artwork['image_thumbnail_url']}\"></a></li>"
+                        #{artwork['title']}<br/><img src=\"#{artwork['image_thumbnail_url']}\"></a></li>"
       end
       artist_info += "</ul>"
     end
