@@ -439,3 +439,7 @@ button-large {
 }
 
 /* Landing */
+
+.right{
+  float: right;
+}
