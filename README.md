@@ -25,7 +25,7 @@ Authors:
  * [Fernando Briano](http://picandocodigo.net)
  * [Nicolas Barrera](http://mcdlr.com)
 
-Development sponsored by **[Cubox](http://cuboxlabs.com)**
+Development sponsored by **[Neo](http://neo.com)**
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
