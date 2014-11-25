@@ -1,11 +1,8 @@
 require 'yaml'
-require 'httparty'
+require 'requests'
 
 # Public - Generic class for http access on the MNAV API
 class MNAVService
-  include HTTParty
-  format :json
-
   # Public - Constructor
   #
   # Get the base_uri from api_info.yaml
@@ -21,10 +18,10 @@ class MNAVService
   def get_data(url, query = nil)
     url = "#{@base_uri}/#{url}/"
     if(query)
-      data = HTTParty.get(url, :query => query)
+      data = Requests.request("GET", url, params: query )
     else
-      data = HTTParty.get(url)
+      data = Requests.request("GET", url)
     end
-    return data.parsed_response
+    return JSON.parse data.body
   end
 end
