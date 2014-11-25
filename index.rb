@@ -7,29 +7,29 @@ require './lib/wikipedia_service.rb'
 require './helpers.rb'
 
 get '/style.css' do
-  content_type 'text/css', :charset => 'utf-8'
+  content_type 'text/css', charset: 'utf-8'
   scss :style
 end
 
 get '/' do
-  @title = "Inicio"
+  @title = 'Inicio'
   service = ArtistService.new
   @artists = service.get_top_artists(10)
   haml :index
 end
 
 get '/acerca-de' do
-  @title = "Acerca de"
+  @title = 'Acerca de'
   haml :about
 end
 
 get '/contacto' do
-  @title = "Contacto"
+  @title = 'Contacto'
   haml :contact
 end
 
 get '/datos-abiertos' do
-  @title = "Datos abiertos"
+  @title = 'Datos abiertos'
   haml :open_data
 end
 

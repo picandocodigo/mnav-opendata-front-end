@@ -11,9 +11,9 @@ class ArtistService < MNAVService
   # id - Integer
   #
   def get_artist(id)
-    artist = self.get_data("artists/#{id.to_i}")
+    artist = get_data("artists/#{id.to_i}")
     artist['artworks'] = get_artist_artworks(id)
-    return artist
+    artist
   end
 
   # Public - get artist searching by their name
@@ -21,7 +21,7 @@ class ArtistService < MNAVService
   # name - String
   #
   def get_artists_by_name(name)
-    self.get_data("artists", {:name => name})
+    get_data('artists', name: name)
   end
 
   # Public - get artists by birth year
@@ -29,19 +29,19 @@ class ArtistService < MNAVService
   # birth - must be an Array with a year range
   #
   def get_artists_by_birth(birth)
-    self.get_data("artists", {:birth => birth})
+    get_data('artists', birth: birth)
   end
 
   def get_top_artists(limit = 10)
-    self.get_data("top/artists", {:limit => limit})
+    get_data('top/artists', limit: limit)
   end
 
   private
+
   # Internal - Get an artist's artworks
   #
   # id - artist's id
   def get_artist_artworks(id)
-    self.get_data("artists/#{id}/artworks")
+    get_data("artists/#{id}/artworks")
   end
-
 end

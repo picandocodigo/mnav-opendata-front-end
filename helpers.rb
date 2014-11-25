@@ -9,17 +9,13 @@ helpers do
   end
 
   def show_artist_birth(artist)
-    if artist['birth']
-      "Nacimiento: #{artist['birth']}"
-    end
+    "Nacimiento: #{artist['birth']}" if artist['birth']
   end
 
   def show_artist_info(artist)
     artist_info = ''
 
-    if artist['year']
-      artist_info += "Nacimiento: #{artwork['year']}"
-    end
+    artist_info += "Nacimiento: #{artwork['year']}" if artist['year']
 
     if artist['biography']
       artist_info += "Biograf&iacute;a: #{artist['biography']}"
@@ -28,15 +24,16 @@ helpers do
     if artist['artworks']
       artist_info += "<h3>Obras</h3>\n\t<ul>"
       @artist['artworks'].each do |artwork|
-        artist_info += "<li><a href=\"/obras/#{artwork['id']}\" title=\"#{artwork['title']}\">
-                        #{artwork['title']}<br/><img src=\"#{artwork['image_thumbnail_url']}\"></a></li>"
+        artist_info += "<li> \
+                       <a href=\"/obras/#{artwork['id']}\" \
+                       title=\"#{artwork['title']}\"> \
+                       #{artwork['title']}<br/> \
+                       <img src=\"#{artwork['image_thumbnail_url']}\"></a></li>"
       end
-      artist_info += "</ul>"
+      artist_info += '</ul>'
     end
+
     artist_info
   end
 
-  def title
-   @title
-  end
 end

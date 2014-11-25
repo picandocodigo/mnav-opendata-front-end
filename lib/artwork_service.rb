@@ -8,14 +8,13 @@ class ArtworkService < MNAVService
   #
   # id - Integer
   def get_artwork(id)
-    self.get_data("artworks/#{id.to_i}")
+    get_data("artworks/#{id.to_i}")
   end
 
   # Public - Search artworks with certain technique
   #
   # technique - String
   def get_artwork_by_technique(technique)
-    self.get_data("artworks", {:technique => technique})
+    get_data('artworks', technique: technique)
   end
-
 end
