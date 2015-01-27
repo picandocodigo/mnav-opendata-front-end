@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.2.0'
 
 gem 'rack'
 gem 'sinatra'
@@ -6,3 +7,4 @@ gem 'sinatra-r18n'
 gem 'haml'
 gem 'sass'
 gem 'requests'
+gem 'unicorn'
